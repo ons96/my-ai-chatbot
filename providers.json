@@ -1,0 +1,67 @@
+{
+  "providers": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "type": "openai-compatible",
+      "baseUrl": "https://api.openai.com/v1",
+      "apiKeyEnv": "OPENAI_API_KEY",
+      "modelsEndpoint": "/models",
+      "defaultModels": ["gpt-4o-mini", "gpt-4o", "gpt-3.5-turbo"]
+    },
+    {
+      "id": "grok",
+      "name": "Grok (xAI)",
+      "type": "openai-compatible",
+      "baseUrl": "https://api.x.ai/v1",
+      "apiKeyEnv": "GROK_API_KEY",
+      "modelsEndpoint": "/models",
+      "defaultModels": ["grok-beta"]
+    },
+    {
+      "id": "mistral",
+      "name": "Mistral AI",
+      "type": "openai-compatible",
+      "baseUrl": "https://api.mistral.ai/v1",
+      "apiKeyEnv": "MISTRAL_API_KEY",
+      "modelsEndpoint": "/models",
+      "defaultModels": ["mistral-tiny", "mistral-small", "mistral-medium"]
+    },
+    {
+      "id": "gemini",
+      "name": "Google Gemini",
+      "type": "gemini",
+      "baseUrl": "https://generativelanguage.googleapis.com/v1beta",
+      "apiKeyEnv": "GEMINI_API_KEY",
+      "defaultModels": ["gemini-1.5-flash", "gemini-1.5-pro"]
+    },
+    {
+      "id": "puter",
+      "name": "Puter.js Executor",
+      "type": "puter",
+      "tokenEnv": "PUTER_TOKEN",
+      "sandboxConfig": {
+        "timeout": 5000,
+        "memoryLimit": "128mb"
+      }
+    }
+  ],
+  "searchProviders": [
+    {
+      "id": "tavily",
+      "name": "Tavily Search",
+      "baseUrl": "https://api.tavily.com/search",
+      "apiKeyEnv": "TAVILY_API_KEY",
+      "queryParam": "query",
+      "resultFormat": "tavily"
+    },
+    {
+      "id": "brave",
+      "name": "Brave Search",
+      "baseUrl": "https://api.search.brave.com/res/v1/web/search",
+      "apiKeyEnv": "BRAVE_API_KEY",
+      "queryParam": "q",
+      "resultFormat": "brave"
+    }
+  ]
+}
